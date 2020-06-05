@@ -1,0 +1,15 @@
+Adverse event identified	field_adverse_event_identified	List (text)	
+
+AE receipt no	field_ae_receipt_no	Text (plain)	
+
+Contact date	field_contact_date	Text (plain)	
+
+Contact name	field_contact_name	Text (plain)	
+
+Contact note	field_contact_note	Text (plain, long)	
+
+Deleted by	field_delete_by	Text (plain)	
+
+Deleted date	field_delete_date	Text (plain)	
+
+Type of contact	field_type_of_contact	Entity reference

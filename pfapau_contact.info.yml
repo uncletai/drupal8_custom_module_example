@@ -1,0 +1,5 @@
+name: Pfapau Contact
+description: Provide 'Contact Logs' related functions.
+package: Custom
+type: module
+core: 8.x

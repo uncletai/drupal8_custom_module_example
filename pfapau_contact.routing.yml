@@ -1,0 +1,34 @@
+contact_add:
+  path: '/contact_logs/add'
+  defaults:
+    _form: '\Drupal\pfapau_contact\Form\ContactLogForm'
+    _title: 'Add contact'
+  requirements:
+    _role: 'program_manager'
+
+contact_log_list:
+  path: '/xeljanz/contacts'
+  defaults:
+    _controller: '\Drupal\pfapau_contact\Controller\ContactlogController::list'
+  requirements:
+    _role: 'program_manager'
+
+contact_edit:
+  path: '/contact_log/{log_id}/edit'
+  defaults:
+    _form: '\Drupal\pfapau_contact\Form\ContactLogForm'
+    _title: 'Contact log details'
+  requirements:
+    _role: 'program_manager'
+    log_id: '\d+'
+
+contact_log:
+  path: 'contact_log/{log_entity}/delete'
+  defaults:
+    _controller: '\Drupal\pfapau_contact\Controller\ContactlogController::deleteLog'
+  requirements:
+    _role: 'program_manager'
+  options:
+    parameters:
+      log_entity:
+        type: entity:contact_logs

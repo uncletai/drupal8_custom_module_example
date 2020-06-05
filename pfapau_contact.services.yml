@@ -1,0 +1,13 @@
+services:
+  pfapau_services.pfapau_contact:
+    class: Drupal\pfapau_contact\Services\PfapauContactServices
+    arguments:
+      - '@entity_type.manager'
+
+  pfapau_contact.contact_breadcrumb:
+    class: Drupal\pfapau_contact\Breadcrumb\ContactBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 1009 }
+    arguments:
+      - '@current_user'
+      - '@access_manager'
